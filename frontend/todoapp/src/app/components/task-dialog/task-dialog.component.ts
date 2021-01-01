@@ -30,12 +30,19 @@ export class TaskDialogComponent implements OnInit {
   onEditClick(): void {
 
     const numberChosenStatus: number = this.status.value[1];
-    const task: Task = new Task(this.data.task.description, numberChosenStatus);
 
-    console.log(task);
-    //TODO
-    //this.taskService.modifyTask(task);
-    // update tasks
+    const task: Task = new Task(this.data.task.description, numberChosenStatus);
+    task.id = this.data.task.id;
+
+    this.taskService.modifyTask(task).subscribe(isModified => {
+ 
+      if(isModified) {
+        
+        this.taskService.getTasks();
+        this.dialogRef.close()
+      }
+    });
+    
   }
   onNoClick(): void {
     this.dialogRef.close();

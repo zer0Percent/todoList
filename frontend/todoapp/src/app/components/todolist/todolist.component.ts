@@ -26,19 +26,27 @@ export class TodolistComponent implements OnInit {
   ngOnInit(): void {
 
     // We retrieve the tasks calling de web service
-    this.completed = this.tasks.filter(x => x.status === 1);
-    this.pending = this.tasks.filter(x => x.status === 0);
-    // TODO:
-/*     this.taskService.getTasks().subscribe( retrievedTasks => {
-
-      this.tasksRetrieved = true;
-      this.completed = retrievedTasks.filter(x => x.status === 1);
-      this.pending = retrievedTasks.filter(x => x.status === 0);
-      
-
-    }); */
+    this.retrieveTasks();
+    
   }
 
+  public retrieveTasks(){
+
+    this.taskService.tasks$.subscribe(tasks => {
+
+      this.completed = tasks.filter(x => x.status === 1);
+      this.pending = tasks.filter(x => x.status === 0);
+
+    });
+    this.taskService.getTasks();
+/*     this.taskService.getTasks().subscribe( retrievedTasks => {
+
+      this.completed = retrievedTasks.filter(x => x.status === 1);
+      this.pending = retrievedTasks.filter(x => x.status === 0);
+      this.tasksRetrieved = true;
+
+    });  */
+  }
 
   public onClickNewTask(): any {
 
