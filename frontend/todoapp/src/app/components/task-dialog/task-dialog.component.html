@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{data.header}}</h1>
+<div mat-dialog-content>
+    <p>{{data.message}}</p>
+    <mat-form-field >  
+        <mat-label>Choose a status</mat-label>
+        <mat-select [formControl] = "status">
+            <mat-option *ngFor="let s of states" [value]="s">
+                {{s[0]}}
+            </mat-option>
+        </mat-select>
+
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <!--Pass the new description-->
+  <button mat-button cdkFocusInitial mat-stroked-button color="primary" (click)="onEditClick()">{{data.buttonSubmmit}}</button>
+  <button mat-button mat-stroked-button (click)="onNoClick()">Cancel</button>
+</div>
