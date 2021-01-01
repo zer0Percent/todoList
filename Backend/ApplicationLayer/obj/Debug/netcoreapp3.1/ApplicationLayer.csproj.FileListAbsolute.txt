@@ -1,0 +1,14 @@
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/ApplicationLayer.deps.json
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/ApplicationLayer.dll
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/ApplicationLayer.pdb
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/DomainLayer.dll
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/PersistenceLayer.dll
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/DomainLayer.pdb
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/bin/Debug/netcoreapp3.1/PersistenceLayer.pdb
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.csprojAssemblyReference.cache
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.AssemblyInfoInputs.cache
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.AssemblyInfo.cs
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.csproj.CoreCompileInputs.cache
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.csproj.CopyComplete
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.dll
+/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/Debug/netcoreapp3.1/ApplicationLayer.pdb
