@@ -1,0 +1,28 @@
+
+<h1 mat-dialog-title>New task</h1>
+<form [formGroup]="taskForm">
+    <div mat-dialog-content>
+
+        <mat-form-field >  
+            <mat-label>Enter a description</mat-label>
+            <input type="text" matInput formControlName="descriptionFormControl">
+
+    
+        </mat-form-field>
+
+        <!--mat-form-field >  
+            <mat-label>Choose a status</mat-label>
+            <mat-select formControlName = "statusFormControl">
+                <mat-option *ngFor="let s of states" [value]="s">
+                    {{s[0]}}
+                </mat-option>
+            </mat-select>
+    
+        </mat-form-field> --> 
+    </div>
+    <div mat-dialog-actions>
+        <!--Pass the new description-->
+      <button mat-button cdkFocusInitial mat-stroked-button color="primary" (click)="onAddClick()">Add task</button>
+      <button mat-button mat-stroked-button (click)="onNoClick()">Cancel</button>
+    </div>
+</form>
