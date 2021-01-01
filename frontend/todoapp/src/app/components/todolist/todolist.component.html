@@ -1,0 +1,51 @@
+
+<div class="newTask">
+  <button mat-fab color="accent" (click)="onClickNewTask()">
+    <mat-icon>add_task</mat-icon>
+  </button>
+</div>
+<mat-accordion>
+    
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Completed tasks
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <ng-container *ngIf="this.areThereCompleted(); else noCompleted">
+        <div class="cardsContainer">
+          <ng-container *ngFor="let t of this.completed">
+              <div class="cardSurrounding">
+                  <task-component [givenTask] = t></task-component>
+              </div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-template #noCompleted>
+          There are no completed tasks!
+      </ng-template>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Pending tasks
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-container *ngIf="this.areTherePending(); else noPending">
+        <div class="cardsContainer">
+          <ng-container *ngFor="let t of this.pending">
+            <div class="cardSurrounding" >
+            <task-component [givenTask] = t></task-component>
+          </div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-template #noPending>
+          There are no pending tasks!
+      </ng-template>
+    </mat-expansion-panel>
+</mat-accordion>
