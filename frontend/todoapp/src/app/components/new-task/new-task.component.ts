@@ -31,9 +31,13 @@ export class NewTaskComponent implements OnInit {
     const status: number = 0; // status Pending by default
 
     const newTask: Task = new Task(description, status);
-
-    console.log(newTask);
-    // TODO;
-    //this.taskService.postTask(newTask);
+    
+    this.taskService.postTask(newTask).subscribe(isInserted => {
+      if(isInserted) {
+        this.dialogRef.close();
+        this.taskService.getTasks();
+      }
+      
+    });
   }
 }

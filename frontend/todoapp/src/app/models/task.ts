@@ -7,6 +7,7 @@
  */
 export class Task {
 
+    public id: number;
     public status: number;
     public description: string;
 

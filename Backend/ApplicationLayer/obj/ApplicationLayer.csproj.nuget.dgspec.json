@@ -1,0 +1,195 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/ApplicationLayer.csproj": {}
+  },
+  "projects": {
+    "/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/ApplicationLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/ApplicationLayer.csproj",
+        "projectName": "ApplicationLayer",
+        "projectPath": "/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/ApplicationLayer.csproj",
+        "packagesPath": "/Users/alvaro/.nuget/packages/",
+        "outputPath": "/Users/alvaro/Documents/Github/todoList/Backend/ApplicationLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alvaro/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj": {
+                "projectPath": "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj"
+              },
+              "/Users/alvaro/Documents/Github/todoList/Backend/PersistenceLayer/PersistenceLayer.csproj": {
+                "projectPath": "/Users/alvaro/Documents/Github/todoList/Backend/PersistenceLayer/PersistenceLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj",
+        "projectName": "DomainLayer",
+        "projectPath": "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj",
+        "packagesPath": "/Users/alvaro/.nuget/packages/",
+        "outputPath": "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alvaro/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alvaro/Documents/Github/todoList/Backend/PersistenceLayer/PersistenceLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alvaro/Documents/Github/todoList/Backend/PersistenceLayer/PersistenceLayer.csproj",
+        "projectName": "PersistenceLayer",
+        "projectPath": "/Users/alvaro/Documents/Github/todoList/Backend/PersistenceLayer/PersistenceLayer.csproj",
+        "packagesPath": "/Users/alvaro/.nuget/packages/",
+        "outputPath": "/Users/alvaro/Documents/Github/todoList/Backend/PersistenceLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alvaro/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj": {
+                "projectPath": "/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/DomainLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
