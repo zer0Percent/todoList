@@ -11,7 +11,7 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class TaskDialogComponent implements OnInit {
 
-  // tuples of status a their corresponding status number. Ideally, this would come via a web service
+  // tuples of status and their corresponding status number. Ideally, this would come via a web service
   states: Array<[string, number]> = [['Pending', 0], ['Completed', 1]];
 
   // FormControl to catch the value (tuple [string, number]) of the chosen option
@@ -40,7 +40,7 @@ export class TaskDialogComponent implements OnInit {
  
       if(isModified) {
         
-        this.taskService.getTasks();
+        this.taskService.updateTasks();
         this.dialogRef.close()
       }
     });
