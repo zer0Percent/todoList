@@ -28,7 +28,9 @@ Front-end:
 * implemented a service to perform the calls to de REST API. I used an observable variable to keep a track of the tasks retrieved by the GET method because, when adding a new task or modifying one, we need to show up the new tasks (we update the content that is being watched).
 
 Back-end
-I used a SQLite database in order to persist the information. I applied Entity Framework Core and ASP.NET Core concepts to make the CRUD application.
+* I used a SQLite database in order to persist the information. I applied Entity Framework Core and ASP.NET Core concepts to make the CRUD application with a entity named Task. 
+
+#This is the fatest approach but no the better one. I would have implemented a generic Repository to perform CRUD operations given any kind of entity, using a N-layer architecture (but this approach takes much longer so I ended up to keep the things simple).
 ## If you were unable to complete any user stories, outline why and how would you have liked to implement them.
 I implemented the whole task in 4 hours but the back-end testing part was giving me some troubles. That's why I spend a little bit more time but with no luck (I used macOS and, sometimes, it can be a little bit painful to perform some actions).
 
