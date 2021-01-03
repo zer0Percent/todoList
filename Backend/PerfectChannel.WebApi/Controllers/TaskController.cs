@@ -18,10 +18,19 @@ namespace PerfectChannel.WebApi.Controllers
         public IEnumerable<Task> GetTasks()
         {
             IEnumerable<Task> tasks = new List<Task>();
-            using(ApplicationDbContext dbContext = new ApplicationDbContext())
+
+            try
             {
-                tasks = dbContext.Task.ToList<Task>();
-                
+                using (ApplicationDbContext dbContext = new ApplicationDbContext())
+                {
+                    tasks = dbContext.Task.ToList<Task>();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                // TODO: Manage exceptions with a log manager
+                throw ex;
             }
 
             return tasks;
