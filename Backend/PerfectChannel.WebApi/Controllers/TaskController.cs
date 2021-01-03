@@ -41,9 +41,10 @@ namespace PerfectChannel.WebApi.Controllers
                     dbContext.SaveChanges();
                     result = true;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    throw new Exception("Could not add the given task");
+                    // TODO: Manage the error with a log manager
+                    throw ex;
                 }
 
                 
@@ -64,9 +65,10 @@ namespace PerfectChannel.WebApi.Controllers
                     dbContext.SaveChanges();
                     result = true;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    throw new Exception("Coult not update the given task");
+                    //TODO: Manage the exception with the log manager
+                    throw ex;
                 }
                 
             }
