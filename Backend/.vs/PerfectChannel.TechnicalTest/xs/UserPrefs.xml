@@ -2,30 +2,21 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="PerfectChannel.WebApi/Startup.cs">
     <Files>
       <File FileName="PerfectChannel.WebApi/Properties/launchSettings.json" Line="32" Column="1" />
-      <File FileName="PerfectChannel.WebApi/Controllers/TaskController.cs" Line="47" Column="40" />
-      <File FileName="ApplicationLayer/Services/TaskApplicationService.cs" Line="72" Column="32" />
-      <File FileName="PersistenceLayer/Repository/TaskRepository.cs" Line="8" Column="42" />
-      <File FileName="PerfectChannel.WebApi/Program.cs" Line="1" Column="1" />
-      <File FileName="PerfectChannel.WebApi/Startup.cs" Line="50" Column="26" />
+      <File FileName="PerfectChannel.WebApi/Controllers/TaskController.cs" />
+      <File FileName="PerfectChannel.WebApi/Models/Task.cs" />
+      <File FileName="PerfectChannel.WebApi/ApplicationDbContext.cs" />
+      <File FileName="PerfectChannel.WebApi/appsettings.json" />
+      <File FileName="PerfectChannel.WebApi/Program.cs" />
+      <File FileName="PerfectChannel.WebApi/Startup.cs" Line="29" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PerfectChannel.TechnicalTest" expanded="True">
-            <Node name="ApplicationLayer" expanded="True">
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="DomainLayer" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Entities" expanded="True" />
-              <Node name="Repository" expanded="True" />
-            </Node>
             <Node name="PerfectChannel.WebApi" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Startup.cs" selected="True" />
-            </Node>
-            <Node name="PersistenceLayer" expanded="True">
-              <Node name="Repository" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -33,12 +24,15 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>ApplicationLayer/ApplicationLayer.csproj</String>
+    <String>DomainLayer/DomainLayer.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.PerfectChannel.WebApi PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/alvaro/Documents/Github/todoList/Backend/PerfectChannel.WebApi/Controllers/TaskController.cs" relfile="PerfectChannel.WebApi/Controllers/TaskController.cs" line="17" column="1" />
-      <Breakpoint file="/Users/alvaro/Documents/Github/todoList/Backend/PerfectChannel.WebApi/Controllers/TaskController.cs" relfile="PerfectChannel.WebApi/Controllers/TaskController.cs" line="26" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

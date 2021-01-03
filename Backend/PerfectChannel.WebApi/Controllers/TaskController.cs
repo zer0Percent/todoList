@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using ApplicationLayer.Services;
-using DomainLayer;
+using PerfectChannel.WebApi.Models;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace PerfectChannel.WebApi.Controllers
 {
@@ -11,31 +13,39 @@ namespace PerfectChannel.WebApi.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-        [HttpGet("something", Name = "something")]
-        public string some()
-        {
-            return "algo";
-        }
-        // TODO: to be completed
+
         [HttpGet("GetTasks", Name = "GetTasks")]
         public IEnumerable<Task> GetTasks()
         {
             IEnumerable<Task> tasks = new List<Task>();
-            using(TaskApplicationService taskService = new TaskApplicationService())
+            using(ApplicationDbContext dbContext = new ApplicationDbContext())
             {
-                tasks = taskService.GetTasks();
+                tasks = dbContext.Task.ToList<Task>();
+                
             }
 
             return tasks;
+
         }
 
         [HttpPost("AddTask", Name = "AddTask")]
         public bool AddTask(Task newTask)
         {
             bool result = false;
-            using(TaskApplicationService taskService = new TaskApplicationService())
+            using(ApplicationDbContext dbContext = new ApplicationDbContext())
             {
-                result = taskService.PostTask(newTask);
+                try
+                {
+                    dbContext.Add<Task>(newTask);
+                    dbContext.SaveChanges();
+                    result = true;
+                }
+                catch
+                {
+                    throw new Exception("Could not add the given task");
+                }
+
+                
             }
             return result;
         }
@@ -44,9 +54,21 @@ namespace PerfectChannel.WebApi.Controllers
         public bool ModifyTask(Task taskToModify)
         {
             bool result = false;
-            using(TaskApplicationService taskService = new TaskApplicationService())
+            using(ApplicationDbContext dbContext = new ApplicationDbContext())
             {
-                result = taskService.ModifyTask(taskToModify);
+                try
+                {
+                    //dbContext.Attach<Task>(taskToModify);
+                    dbContext.Entry<Task>(taskToModify).State = EntityState.Modified;
+                    dbContext.Update(taskToModify);
+                    dbContext.SaveChanges();
+                    result = true;
+                }
+                catch
+                {
+                    throw new Exception("Coult not update the given task");
+                }
+                
             }
 
             return result;

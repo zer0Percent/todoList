@@ -11,11 +11,11 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class TaskDialogComponent implements OnInit {
 
-  // FormControl to catch the value (number) of the chosen option
-  status = new FormControl('');
-
   // tuples of status a their corresponding status number. Ideally, this would come via a web service
   states: Array<[string, number]> = [['Pending', 0], ['Completed', 1]];
+
+  // FormControl to catch the value (tuple [string, number]) of the chosen option
+  status = new FormControl('');
 
   constructor(public dialogRef: MatDialogRef<TaskDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any, // data contains an object referecing the clicked task
@@ -34,6 +34,8 @@ export class TaskDialogComponent implements OnInit {
     const task: Task = new Task(this.data.task.description, numberChosenStatus);
     task.id = this.data.task.id;
 
+    // We call the web service, returning whether it was modified or not.
+    // If so, we update the tasks again
     this.taskService.modifyTask(task).subscribe(isModified => {
  
       if(isModified) {
@@ -44,10 +46,18 @@ export class TaskDialogComponent implements OnInit {
     });
     
   }
+
+  /**
+   * Close the dialog when click on 'Cancel'
+   */
   onNoClick(): void {
     this.dialogRef.close();
   }
 
+  /**
+   * Get the status os a given task
+   * @param task 
+   */
   public getStatus(task: Task): [string, number] {
     return this.states.find(x => x[1] === task.status);
   }
