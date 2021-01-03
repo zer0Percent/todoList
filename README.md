@@ -25,7 +25,7 @@ It is important to change this string in order to access to the database file.
 ## Explain briefly your technical design and why do you think is the best approach to this problem.
 Front-end: 
 * Four component were implemented. Two of them are dedicated to show a pop-up to edit/create a new task when clicking certains buttons.
-* implemented a service to perform the calls to de REST API. I used an observable variable to keep a track of the tasks retrieved by the GET method because, when adding a new task or modifying one, we need to show up the new tasks (we update the content that is being watched).
+* I implemented a service to perform the calls to de REST API. I used an observable variable to keep a track of the tasks retrieved by the GET method because, when adding a new task or modifying one, we need to show up the new tasks (we update the content that is being watched).
 
 Back-end
 * I used a SQLite database in order to persist the information. I applied Entity Framework Core and ASP.NET Core concepts to make the CRUD application with a entity named Task. 
@@ -56,4 +56,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## BACKEND
-Just open the proyect on Visual Studio, change the connection string placed in appsettings.json and run de application. You can test the web services via Postman.
+Just open the project on Visual Studio, change the connection string placed in appsettings.json and run de application. You can test the web services via Postman.
