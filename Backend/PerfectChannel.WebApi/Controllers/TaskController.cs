@@ -36,6 +36,7 @@ namespace PerfectChannel.WebApi.Controllers
             {
                 try
                 {
+                    dbContext.Entry<Task>(newTask).State = EntityState.Added;
                     dbContext.Add<Task>(newTask);
                     dbContext.SaveChanges();
                     result = true;
@@ -58,7 +59,6 @@ namespace PerfectChannel.WebApi.Controllers
             {
                 try
                 {
-                    //dbContext.Attach<Task>(taskToModify);
                     dbContext.Entry<Task>(taskToModify).State = EntityState.Modified;
                     dbContext.Update(taskToModify);
                     dbContext.SaveChanges();
