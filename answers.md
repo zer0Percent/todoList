@@ -1,5 +1,8 @@
 ﻿### Repository link
 https://github.com/zer0Percent/todoList
+## Important
+Do not forget to execute npm install. It's required in order to execute the front-end application.
+
 ## How long did you spend on your solution?
 It took me about 5.5 hours to complete the functionality requested keeping in mind that I had to install some Angular libraries and I had troubles with the back-end testing part.
 ## How do you build and run your solution?
