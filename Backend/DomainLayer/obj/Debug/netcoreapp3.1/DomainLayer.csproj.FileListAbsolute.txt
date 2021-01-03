@@ -1,8 +1,0 @@
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/bin/Debug/netcoreapp3.1/DomainLayer.deps.json
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/bin/Debug/netcoreapp3.1/DomainLayer.dll
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/bin/Debug/netcoreapp3.1/DomainLayer.pdb
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/obj/Debug/netcoreapp3.1/DomainLayer.AssemblyInfoInputs.cache
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/obj/Debug/netcoreapp3.1/DomainLayer.AssemblyInfo.cs
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/obj/Debug/netcoreapp3.1/DomainLayer.csproj.CoreCompileInputs.cache
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/obj/Debug/netcoreapp3.1/DomainLayer.dll
-/Users/alvaro/Documents/Github/todoList/Backend/DomainLayer/obj/Debug/netcoreapp3.1/DomainLayer.pdb

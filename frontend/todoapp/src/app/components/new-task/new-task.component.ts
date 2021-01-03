@@ -35,7 +35,7 @@ export class NewTaskComponent implements OnInit {
     this.taskService.postTask(newTask).subscribe(isInserted => {
       if(isInserted) {
         this.dialogRef.close();
-        this.taskService.getTasks();
+        this.taskService.updateTasks();
       }
       
     });

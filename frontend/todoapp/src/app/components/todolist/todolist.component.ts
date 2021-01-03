@@ -19,8 +19,6 @@ export class TodolistComponent implements OnInit {
   completed: Array<Task> = [];
   pending: Array<Task> = [];
 
-  tasks: Array<Task> = [new Task('escuchar el disco de dua lipa', 0), new Task('escuchar el disco de dua lipa', 0),  new Task('escuchar miley cyrus', 1)];
-
   tasksRetrieved: boolean = false;
 
   ngOnInit(): void {
@@ -38,16 +36,13 @@ export class TodolistComponent implements OnInit {
       this.pending = tasks.filter(x => x.status === 0);
 
     });
-    this.taskService.getTasks();
-/*     this.taskService.getTasks().subscribe( retrievedTasks => {
+    this.taskService.updateTasks();
 
-      this.completed = retrievedTasks.filter(x => x.status === 1);
-      this.pending = retrievedTasks.filter(x => x.status === 0);
-      this.tasksRetrieved = true;
-
-    });  */
   }
 
+  /**
+   * Open a dialog when clicking de add button
+   */
   public onClickNewTask(): any {
 
     const dialogRef = this.dialog.open(NewTaskComponent, {
