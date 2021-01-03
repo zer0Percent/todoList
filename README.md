@@ -18,14 +18,14 @@ On the other hand, a SQLite database was used. The string connection can be chan
 It is important to change this string in order to access to the database file.
 
 ## What technical and functional assumptions did you make when implementing your solution?
-1 I have assumed that there will be only two tasks categories so, in the front-end, there will always be two groups (two accordions). 
+* I have assumed that there will be only two tasks categories so, in the front-end, there will always be two groups (two accordions). 
   However, the status field on the Task class is typed as an integer (in order to keep in mind that it is possible to have multiples status).
-2 I have assumed that is it possible to have tasks with the same description.
+* I have assumed that is it possible to have tasks with the same description.
 
 ## Explain briefly your technical design and why do you think is the best approach to this problem.
 Front-end: 
-1 Four component were implemented. Two of them are dedicated to show a pop-up to edit/create a new task when clicking certains buttons.
-I implemented a service to perform the calls to de REST API. I used an observable variable to keep a track of the tasks retrieved by the GET method because, when adding a new task or modifying one, we need to show up the new tasks (we update the content that is being watched).
+* Four component were implemented. Two of them are dedicated to show a pop-up to edit/create a new task when clicking certains buttons.
+* implemented a service to perform the calls to de REST API. I used an observable variable to keep a track of the tasks retrieved by the GET method because, when adding a new task or modifying one, we need to show up the new tasks (we update the content that is being watched).
 
 Back-end
 I used a SQLite database in order to persist the information. I applied Entity Framework Core and ASP.NET Core concepts to make the CRUD application.
